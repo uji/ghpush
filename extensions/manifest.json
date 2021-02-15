@@ -1,10 +1,16 @@
 {
-  "name": "extension",
-  "description": "extension",
+  "name": "ghpush",
+  "description": "notify github`s notifications",
   "version": "1.0.0",
   "browser_action": {
     "default_popup": "./dist/index.html"
   },
-  "permissions": [],
+  "permissions": [
+    "notifications",
+    "alarms"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
   "manifest_version": 2
 }

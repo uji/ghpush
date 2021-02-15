@@ -15,6 +15,7 @@
 # production
 /build
 /extensions/dist
+/extensions/background.js
 
 # misc
 .DS_Store

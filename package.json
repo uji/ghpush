@@ -6,9 +6,10 @@
     "dev": "next dev -p 8080",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export -o extensions/dist"
+    "export": "next build && next export -o extensions/dist && tsc -p background --outDir extensions"
   },
   "dependencies": {
+    "@types/chrome": "^0.0.130",
     "next": "10.0.6",
     "react": "17.0.1",
     "react-dom": "17.0.1"

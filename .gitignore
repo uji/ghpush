@@ -14,6 +14,7 @@
 
 # production
 /build
+/extensions/dist
 
 # misc
 .DS_Store

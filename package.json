@@ -6,13 +6,15 @@
     "dev": "next dev -p 8080",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export -o extensions/dist && tsc -p background --outDir extensions"
+    "export": "next build && next export -o extensions/dist && esbuild background/background.ts --bundle --tsconfig=background/tsconfig.json --platform=node --outfile=extensions/background.js"
   },
   "dependencies": {
     "@types/chrome": "^0.0.130",
     "next": "10.0.6",
+    "puppeteer-core": "^7.1.0",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "esbuild": "^0.8.52"
   },
   "devDependencies": {
     "@types/node": "^14.14.28",
